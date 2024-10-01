@@ -15,6 +15,7 @@
 
 .greeting-main {
   display: flex;
+  flex-direction: row-reverse; /* Interchanges the image and text */
 }
 
 .subTitle {

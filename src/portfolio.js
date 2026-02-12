@@ -171,29 +171,38 @@ const workExperiences = {
   display: true, //Set it to true to show workExperiences Section
   experience: [
     {
+      role: "Software Engineer Intern",
+      company: "USC Norman Lear Center",
+      companylogo: require("./assets/images/AnnenbergLogo.png"),
+      date: "May 2025 – Present",
+      descBullets: [
+        "Architected and deployed a Django + PostgreSQL backend on AWS Elastic Beanstalk, optimizing ORM queries, connection pooling, and indexing to boost API throughput 42% and reduce response latency 35% under peak load.",
+        "Developed a React + Django REST search system with dynamic year-filter and keyword routing, improving frontend load times by 30%, enhancing UX, and ensuring seamless API integration across modules.",
+        "Automated ETL pipelines using AWS RDS snapshots, S3, and Python, enabling fault-tolerant data ingestion, accelerated data syncs, consistent environment deployments, and automated schema version control.",
+        "Implemented CI/CD pipelines with rollback support and environment parity checks, increasing release reliability by 40%, reducing deployment errors, and enabling automated AWS builds with GitHub Actions workflows."
+      ]
+    },
+    {
       role: "Software Development Engineer",
       company: "SPIGOT Developers",
       companylogo: require("./assets/images/SPIGOTlogo.png"),
       date: "Jan 2024 – Jul 2024",
-      desc: "Experienced in leading migration projects, optimizing cloud infrastructure, and enhancing front-end performance. Successfully migrated payment processing to in-house microservices (Node.js, Docker), reducing licensing costs by 20%. Revamped React.js components using TDD, improving load times by 15% and trimming bundle size by 1.2 MB. Optimized AWS infrastructure (EC2, S3), cutting costs by 15% while ensuring performance and scalability. Skilled in collaborating with product managers and maintaining regulatory compliance.",
-      // descBullets: [
-      //   "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-      //   "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
-      // ]
+      descBullets: [
+        "Designed Node.js/Express microservices with Redis caching and Kafka workers; improved p95 latency by 35% and doubled throughput (2.1×) across 14+ stable releases via horizontal scaling and async I/O optimization.",
+        "Automated CI/CD pipelines via GitHub Actions (parallel tests, cached images), reducing build-to-deploy time from 18m to 7m (-61%) and enabling one-click rollbacks with Dockerized staging verification checks.",
+        "Refactored a monolith into modular microservices with gRPC APIs, distributed tracing, and rate limiting, improving fault isolation and deployment velocity 3× across environments through containerized orchestration."
+      ]
     },
     {
       role: "Full Stack Developer Intern",
       company: "SPIGOT Developers",
       companylogo: require("./assets/images/SPIGOTlogo.png"),
       date: "May 2023 – Aug 2023",
-      desc: "Developed and led the creation of a portfolio website using Flask, improving team efficiency by 20%. Integrated AJAX for dynamic content loading and RESTful APIs. Leveraged Google Analytics and SEO strategies, resulting in a 25% increase in user engagement and a 15% rise in lead conversions, significantly enhancing market reach and profitability."
-    },
-    {
-      role: "Web developer Intern",
-      company: "Aasma Technology",
-      companylogo: require("./assets/images/AasmaLogo.png"),
-      date: "Jan 2023 – Apr 2023",
-      desc: "Developed responsive web apps using React.js with Jest for testing, boosting user engagement by 20%. Optimized Node.js backend with OAuth2 authentication, reducing server response times by 10% and enhancing API efficiency. Spearheaded Agile practices, accelerating project delivery by 20%."
+      descBullets: [
+        "Built modular Vue.js + TypeScript + Tailwind dashboards for 300+ DAUs with responsive, accessibility UX.",
+        "Implemented OAuth2 + RBAC, blocking 90% of unauthorized requests; deployed serverless functions for analytics.",
+        "Partnered with design/QA to ensure WCAG accessibility compliance and stable user-facing releases."
+      ]
     }
   ]
 };
@@ -235,7 +244,7 @@ const bigProjects = {
     //   ]
     // }
   ],
-  display: true // Set false to hide this section, defaults to true
+  display: false // Set false to hide this section, defaults to true
 };
 // Achievement Section
 // Include certificates, talks etc

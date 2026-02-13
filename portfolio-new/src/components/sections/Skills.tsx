@@ -50,7 +50,7 @@ export default function Skills() {
   const [hoveredCategory, setHoveredCategory] = useState<string | null>(null);
 
   return (
-    <section id="skills" className="py-24 px-6">
+    <section id="skills" className="py-16 sm:py-24 px-4 sm:px-6">
       <div ref={ref} className="mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -61,13 +61,13 @@ export default function Skills() {
           <h3 className="mb-4 text-3xl font-bold sm:text-4xl">
             Skills & <span className="text-gradient">Technologies</span>
           </h3>
-          <p className="mb-12 max-w-2xl text-lg text-muted-foreground">
+          <p className="mb-8 sm:mb-12 max-w-2xl text-base sm:text-lg text-muted-foreground">
             A comprehensive toolkit built through real-world projects and
             production systems. Hover over each category to explore.
           </p>
         </motion.div>
 
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
           {skills.map((category, catIdx) => (
             <motion.div
               key={category.category}

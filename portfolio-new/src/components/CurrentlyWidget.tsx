@@ -36,7 +36,7 @@ export default function CurrentlyWidget() {
   const isInView = useInView(ref, { once: true, margin: "-50px" });
 
   return (
-    <div ref={ref} className="py-12 px-6">
+    <div ref={ref} className="py-8 sm:py-12 px-4 sm:px-6">
       <div className="mx-auto max-w-4xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -52,7 +52,7 @@ export default function CurrentlyWidget() {
             <h3 className="text-lg font-semibold">Currently</h3>
           </div>
 
-          <div className="grid gap-4 sm:grid-cols-2">
+          <div className="grid gap-3 sm:gap-4 grid-cols-1 sm:grid-cols-2">
             {currentItems.map((item, i) => (
               <motion.div
                 key={item.label}

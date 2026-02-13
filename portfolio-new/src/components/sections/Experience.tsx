@@ -20,7 +20,7 @@ function TimelineItem({
   const [expanded, setExpanded] = useState(index === 0);
 
   return (
-    <div ref={ref} className="relative flex gap-6 md:gap-10">
+    <div ref={ref} className="relative flex gap-4 sm:gap-6 md:gap-10">
       {/* Timeline line + dot */}
       <div className="flex flex-col items-center">
         <motion.div
@@ -28,7 +28,7 @@ function TimelineItem({
           animate={isInView ? { scale: 1 } : {}}
           transition={{ duration: 0.4, delay: index * 0.2 }}
           className={cn(
-            "relative z-10 flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full border-2 transition-colors duration-300",
+            "relative z-10 flex h-10 w-10 sm:h-12 sm:w-12 flex-shrink-0 items-center justify-center rounded-full border-2 transition-colors duration-300",
             expanded
               ? "border-primary bg-primary text-primary-foreground"
               : "border-border bg-card text-muted-foreground"
@@ -136,7 +136,7 @@ export default function Experience() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="experience" className="py-24 px-6">
+    <section id="experience" className="py-16 sm:py-24 px-4 sm:px-6">
       <div ref={ref} className="mx-auto max-w-4xl">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -147,7 +147,7 @@ export default function Experience() {
           <h3 className="mb-4 text-3xl font-bold sm:text-4xl">
             Work <span className="text-gradient">Experience</span>
           </h3>
-          <p className="mb-12 max-w-2xl text-lg text-muted-foreground">
+          <p className="mb-8 sm:mb-12 max-w-2xl text-base sm:text-lg text-muted-foreground">
             Building production systems at scale. Click on each role to see
             details.
           </p>

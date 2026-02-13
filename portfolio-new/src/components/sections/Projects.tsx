@@ -19,7 +19,7 @@ export default function Projects() {
       : projects.filter((p) => p.tags.includes(filter));
 
   return (
-    <section id="projects" className="py-24 px-6">
+    <section id="projects" className="py-16 sm:py-24 px-4 sm:px-6">
       <div ref={ref} className="mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -30,7 +30,7 @@ export default function Projects() {
           <h3 className="mb-4 text-3xl font-bold sm:text-4xl">
             Featured <span className="text-gradient">Projects</span>
           </h3>
-          <p className="mb-8 max-w-2xl text-lg text-muted-foreground">
+          <p className="mb-8 sm:mb-12 max-w-2xl text-base sm:text-lg text-muted-foreground">
             A selection of projects I&apos;ve built. Filter by technology to
             explore.
           </p>
@@ -41,7 +41,7 @@ export default function Projects() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="mb-10 flex flex-wrap gap-2"
+          className="mb-6 sm:mb-8 flex flex-wrap gap-2 overflow-x-auto pb-2"
         >
           <button
             onClick={() => setFilter("all")}
@@ -71,7 +71,7 @@ export default function Projects() {
         </motion.div>
 
         {/* Project cards */}
-        <motion.div layout className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <motion.div layout className="grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
           {filteredProjects.map((project, i) => (
             <motion.div
               key={project.title}
@@ -129,7 +129,7 @@ export default function Projects() {
                 {project.description}
               </p>
 
-              <div className="flex flex-wrap gap-2">
+              <div className="mb-6 sm:mb-8 flex flex-wrap gap-2 overflow-x-auto pb-2">
                 {project.tags.map((tag) => (
                   <span
                     key={tag}

@@ -41,7 +41,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 px-6">
+    <section id="contact" className="py-16 sm:py-24 px-4 sm:px-6">
       <div ref={ref} className="mx-auto max-w-4xl">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -53,13 +53,13 @@ export default function Contact() {
           <h3 className="mb-4 text-3xl font-bold sm:text-4xl">
             Get in <span className="text-gradient">Touch</span>
           </h3>
-          <p className="mx-auto mb-12 max-w-lg text-lg text-muted-foreground">
+          <p className="mx-auto mb-8 sm:mb-12 max-w-lg text-base sm:text-lg text-muted-foreground">
             I&apos;m currently open to new opportunities. Whether you have a
             question or just want to say hi, my inbox is always open.
           </p>
         </motion.div>
 
-        <div className="grid gap-10 lg:grid-cols-2">
+        <div className="grid gap-8 sm:gap-10 lg:grid-cols-2">
           {/* Contact form */}
           <motion.form
             onSubmit={handleSubmit}

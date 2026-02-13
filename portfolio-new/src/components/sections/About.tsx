@@ -25,7 +25,7 @@ export default function About() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="about" className="py-24 px-6">
+    <section id="about" className="py-16 sm:py-24 px-4 sm:px-6">
       <div ref={ref} className="mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -45,7 +45,7 @@ export default function About() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="lg:col-span-3 space-y-6"
           >
-            <p className="text-lg leading-relaxed text-muted-foreground">
+            <p className="text-base sm:text-lg leading-relaxed text-muted-foreground">
               I&apos;m a Software Engineer pursuing my{" "}
               <span className="text-foreground font-medium">
                 Master&apos;s in Computer Science at USC (3.85 GPA)
@@ -54,14 +54,14 @@ export default function About() {
               (3.88 GPA). I specialize in building production-grade distributed
               systems, scalable APIs, and cloud-native applications.
             </p>
-            <p className="text-lg leading-relaxed text-muted-foreground">
+            <p className="text-base sm:text-lg leading-relaxed text-muted-foreground">
               My expertise spans the full stack — from React and Next.js
               frontends to Node.js/Django microservices, gRPC APIs, and Kafka
               event pipelines. I&apos;ve deployed on AWS with Docker and
               Kubernetes, automated CI/CD with GitHub Actions, and built
               AI-powered platforms using LLM agents like Claude 3.5 and Letta AI.
             </p>
-            <p className="text-lg leading-relaxed text-muted-foreground">
+            <p className="text-base sm:text-lg leading-relaxed text-muted-foreground">
               Currently studying Analysis of Algorithms, NLP, Information
               Retrieval, and Web Technologies at USC while interning at the{" "}
               <span className="text-foreground font-medium">

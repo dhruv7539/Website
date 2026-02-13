@@ -44,7 +44,8 @@ export default function CustomCursor() {
     document.addEventListener("mouseleave", handleMouseLeave);
     document.addEventListener("mouseenter", handleMouseEnter);
 
-    document.body.style.cursor = "none";
+    const mq = window.matchMedia("(min-width: 768px)");
+    if (mq.matches) document.body.style.cursor = "none";
 
     return () => {
       window.removeEventListener("mousemove", moveCursor);

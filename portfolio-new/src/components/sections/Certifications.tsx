@@ -10,7 +10,7 @@ export default function Certifications() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="certifications" className="py-24 px-6">
+    <section id="certifications" className="py-16 sm:py-24 px-4 sm:px-6">
       <div ref={ref} className="mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -21,12 +21,12 @@ export default function Certifications() {
           <h3 className="mb-4 text-3xl font-bold sm:text-4xl">
             Certifications & <span className="text-gradient">Achievements</span>
           </h3>
-          <p className="mb-12 max-w-2xl text-lg text-muted-foreground">
+          <p className="mb-8 sm:mb-12 max-w-2xl text-base sm:text-lg text-muted-foreground">
             Professional certifications that validate my expertise.
           </p>
         </motion.div>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
           {certifications.map((cert, i) => (
             <motion.a
               key={cert.title}

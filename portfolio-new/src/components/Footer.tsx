@@ -13,8 +13,8 @@ const iconMap: Record<string, React.ReactNode> = {
 
 export default function Footer() {
   return (
-    <footer className="border-t border-border py-8 px-6">
-      <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 sm:flex-row sm:justify-between">
+    <footer className="border-t border-border py-6 sm:py-8 px-4 sm:px-6">
+      <div className="mx-auto flex max-w-6xl flex-col items-center gap-4 sm:gap-6 sm:flex-row sm:justify-between">
         <div className="flex items-center gap-1 text-sm text-muted-foreground">
           <span>Built with</span>
           <Heart className="h-3.5 w-3.5 text-red-500 fill-red-500" />

@@ -90,7 +90,7 @@ export default function Stats() {
   ];
 
   return (
-    <section className="py-16 px-6">
+    <section className="py-12 sm:py-16 px-4 sm:px-6">
       <div ref={ref} className="mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -103,7 +103,7 @@ export default function Stats() {
             Impact in <span className="text-gradient">Numbers</span>
           </h3>
         </motion.div>
-        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
+        <div className="grid grid-cols-2 gap-3 sm:gap-4 sm:grid-cols-3 lg:grid-cols-6">
           {stats.map((stat, i) => (
             <StatItem key={stat.label} {...stat} delay={i * 0.1} />
           ))}

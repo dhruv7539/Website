@@ -58,7 +58,7 @@ function TerminalAnimation() {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.5, duration: 0.6 }}
-      className="w-full max-w-xl rounded-xl border border-border bg-card/80 shadow-2xl backdrop-blur-sm overflow-hidden"
+      className="w-full max-w-xl rounded-xl border border-border bg-card/80 shadow-2xl backdrop-blur-sm overflow-hidden mx-auto lg:mx-0"
     >
       <div className="flex items-center gap-2 border-b border-border px-4 py-3">
         <div className="h-3 w-3 rounded-full bg-red-500" />
@@ -70,7 +70,7 @@ function TerminalAnimation() {
       </div>
       <div
         ref={terminalRef}
-        className="h-52 overflow-y-auto p-4 font-mono text-sm"
+        className="h-40 sm:h-52 overflow-y-auto p-3 sm:p-4 font-mono text-xs sm:text-sm"
       >
         {lines.map((line, i) => (
           <div key={i} className="mb-1">
@@ -117,7 +117,7 @@ function TerminalAnimation() {
 
 export default function Hero() {
   return (
-    <section className="relative flex min-h-screen items-center justify-center overflow-hidden px-6">
+    <section className="relative flex min-h-screen items-center justify-center overflow-hidden px-4 sm:px-6">
       <ParticleBackground />
 
       <div className="absolute inset-0 -z-10">
@@ -125,7 +125,7 @@ export default function Hero() {
         <div className="absolute right-1/4 bottom-1/4 h-72 w-72 rounded-full bg-purple-500/10 blur-[120px]" />
       </div>
 
-      <div className="mx-auto flex max-w-6xl flex-col items-center gap-12 pt-20 lg:flex-row lg:gap-16">
+      <div className="mx-auto flex w-full max-w-6xl flex-col items-center gap-8 pt-24 pb-20 sm:gap-12 sm:pt-20 lg:flex-row lg:gap-16">
         <div className="flex-1 text-center lg:text-left">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -141,7 +141,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="mb-4 text-5xl font-bold tracking-tight sm:text-6xl lg:text-7xl"
+            className="mb-4 text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl"
           >
             <span className="text-gradient">{siteConfig.name}</span>
           </motion.h1>
@@ -150,7 +150,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="mb-6 text-2xl font-semibold text-muted-foreground sm:text-3xl"
+            className="mb-6 text-xl font-semibold text-muted-foreground sm:text-2xl md:text-3xl"
           >
             I build scalable systems & intelligent platforms.
           </motion.h2>
@@ -159,7 +159,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="mb-8 max-w-lg text-lg text-muted-foreground lg:max-w-none"
+            className="mb-8 max-w-lg text-base sm:text-lg text-muted-foreground lg:max-w-none"
           >
             Software Engineer specializing in building scalable full-stack
             applications, cloud infrastructure, and high-performance systems.

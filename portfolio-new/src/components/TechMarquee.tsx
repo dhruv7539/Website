@@ -3,10 +3,10 @@
 import { motion } from "framer-motion";
 
 const techStack = [
-  "Python", "JavaScript", "TypeScript", "React", "Next.js", "Vue.js",
-  "Node.js", "Express.js", "Django", "Flask", "PostgreSQL", "MongoDB",
-  "Redis", "AWS", "Docker", "Kubernetes", "Kafka", "gRPC", "Git",
-  "Tailwind CSS", "CI/CD", "GitHub Actions",
+  "Python", "Go", "TypeScript", "JavaScript", "React", "Next.js",
+  "Django", "FastAPI", "Node.js", "PostgreSQL", "pgvector", "MongoDB",
+  "Redis", "AWS", "Docker", "Kubernetes", "Helm", "Terraform",
+  "Kafka", "gRPC", "Prometheus", "Claude API", "PyTorch", "GitHub Actions",
 ];
 
 function MarqueeRow({ reverse = false, speed = 30 }: { reverse?: boolean; speed?: number }) {

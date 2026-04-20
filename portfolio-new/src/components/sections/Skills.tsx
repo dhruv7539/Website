@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useInView } from "framer-motion";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { skills } from "@/lib/data";
 import { cn } from "@/lib/utils";
 import {
@@ -11,6 +11,7 @@ import {
   Cloud,
   Database,
   Wrench,
+  Brain,
 } from "lucide-react";
 
 const categoryIcons: Record<string, React.ReactNode> = {
@@ -19,25 +20,40 @@ const categoryIcons: Record<string, React.ReactNode> = {
   Backend: <Server className="h-5 w-5" />,
   "Cloud & DevOps": <Cloud className="h-5 w-5" />,
   Databases: <Database className="h-5 w-5" />,
+  "Databases & Messaging": <Database className="h-5 w-5" />,
   "Tools & Testing": <Wrench className="h-5 w-5" />,
+  "ML / NLP / AI": <Brain className="h-5 w-5" />,
 };
 
-function SkillBar({ name, level, delay }: { name: string; level: number; delay: number }) {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-50px" });
-
+function SkillBar({
+  name,
+  level,
+  delay,
+  trigger,
+}: {
+  name: string;
+  level: number;
+  delay: number;
+  trigger: boolean;
+}) {
   return (
-    <div ref={ref} className="space-y-1.5">
+    <div className="space-y-1.5">
       <div className="flex items-center justify-between">
         <span className="text-sm font-medium text-foreground">{name}</span>
         <span className="font-mono text-xs text-muted-foreground">{level}%</span>
       </div>
       <div className="h-2 w-full overflow-hidden rounded-full bg-secondary">
-        <motion.div
-          initial={{ width: 0 }}
-          animate={isInView ? { width: `${level}%` } : { width: 0 }}
-          transition={{ duration: 1, delay, ease: "easeOut" }}
-          className="h-full rounded-full bg-gradient-to-r from-primary to-purple-400"
+        <div
+          className="h-full rounded-full"
+          style={{
+            width: trigger ? `${level}%` : "0%",
+            background:
+              "linear-gradient(to right, hsl(var(--primary)), #c084fc)",
+            transitionProperty: "width",
+            transitionDuration: "1100ms",
+            transitionTimingFunction: "cubic-bezier(0.22, 1, 0.36, 1)",
+            transitionDelay: `${delay * 1000}ms`,
+          }}
         />
       </div>
     </div>
@@ -45,9 +61,28 @@ function SkillBar({ name, level, delay }: { name: string; level: number; delay: 
 }
 
 export default function Skills() {
-  const ref = useRef(null);
+  const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const [hoveredCategory, setHoveredCategory] = useState<string | null>(null);
+  const [barsTrigger, setBarsTrigger] = useState(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setBarsTrigger(true);
+            observer.disconnect();
+          }
+        });
+      },
+      { rootMargin: "0px 0px -80px 0px", threshold: 0.1 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <section id="skills" className="py-16 sm:py-24 px-4 sm:px-6">
@@ -98,7 +133,8 @@ export default function Skills() {
                     key={skill.name}
                     name={skill.name}
                     level={skill.level}
-                    delay={catIdx * 0.1 + skillIdx * 0.05}
+                    delay={catIdx * 0.05 + skillIdx * 0.04}
+                    trigger={barsTrigger}
                   />
                 ))}
               </div>

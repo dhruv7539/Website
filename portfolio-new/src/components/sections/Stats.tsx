@@ -81,12 +81,12 @@ export default function Stats() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const stats = [
-    { icon: <Calendar className="h-6 w-6" />, value: 1.5, suffix: "+", label: "Years of Experience", color: "#7c3aed" },
-    { icon: <FolderGit2 className="h-6 w-6" />, value: 15, suffix: "+", label: "Projects Completed", color: "#2563eb" },
-    { icon: <Code2 className="h-6 w-6" />, value: 12, suffix: "+", label: "Technologies Mastered", color: "#059669" },
-    { icon: <GitCommit className="h-6 w-6" />, value: 500, suffix: "+", label: "GitHub Contributions", color: "#d97706" },
-    { icon: <Coffee className="h-6 w-6" />, value: 1000, suffix: "+", label: "Cups of Coffee", color: "#dc2626" },
-    { icon: <Award className="h-6 w-6" />, value: 3, suffix: "", label: "Certifications", color: "#0891b2" },
+    { icon: <Calendar className="h-6 w-6" />, value: 2, suffix: "+", label: "Years of Experience", color: "#7c3aed" },
+    { icon: <FolderGit2 className="h-6 w-6" />, value: 15, suffix: "+", label: "Projects Built", color: "#2563eb" },
+    { icon: <GitCommit className="h-6 w-6" />, value: 8, suffix: "+", label: "Open Source PRs Merged", color: "#059669" },
+    { icon: <Code2 className="h-6 w-6" />, value: 15, suffix: "+", label: "Technologies", color: "#d97706" },
+    { icon: <Award className="h-6 w-6" />, value: 2, suffix: "", label: "IEEE Publications", color: "#dc2626" },
+    { icon: <Coffee className="h-6 w-6" />, value: 3, suffix: "", label: "Certifications", color: "#0891b2" },
   ];
 
   return (

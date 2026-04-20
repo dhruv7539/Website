@@ -14,17 +14,22 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
+const siteDescription =
+  "Software Engineer specializing in distributed systems, cloud infrastructure, and AI-powered platforms. MS CS @ USC.";
+
 export const metadata: Metadata = {
+  metadataBase: new URL("https://dhruvbhanderi.com"),
   title: "Dhruv Bhanderi — Software Engineer",
-  description:
-    "Software Engineer specializing in full-stack development, cloud infrastructure, and scalable systems. MS CS @ USC.",
+  description: siteDescription,
   keywords: [
     "Dhruv Bhanderi",
     "Software Engineer",
-    "Full Stack Developer",
+    "Distributed Systems",
+    "Cloud Infrastructure",
+    "AI Platforms",
     "React",
     "Next.js",
-    "Node.js",
+    "Django",
     "USC",
   ],
   authors: [{ name: "Dhruv Bhanderi" }],
@@ -33,9 +38,15 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Dhruv Bhanderi — Software Engineer",
-    description:
-      "Software Engineer specializing in full-stack development, cloud infrastructure, and scalable systems.",
+    description: siteDescription,
     type: "website",
+    url: "https://dhruvbhanderi.com",
+    siteName: "Dhruv Bhanderi",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Dhruv Bhanderi — Software Engineer",
+    description: siteDescription,
   },
 };
 

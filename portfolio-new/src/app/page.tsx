@@ -7,6 +7,8 @@ import About from "@/components/sections/About";
 import Skills from "@/components/sections/Skills";
 import Experience from "@/components/sections/Experience";
 import Projects from "@/components/sections/Projects";
+import Publications from "@/components/sections/Publications";
+import OpenSource from "@/components/sections/OpenSource";
 import Certifications from "@/components/sections/Certifications";
 import Contact from "@/components/sections/Contact";
 import Stats from "@/components/sections/Stats";
@@ -46,6 +48,10 @@ export default function Home() {
         <Experience />
         <SectionDivider />
         <Projects />
+        <SectionDivider />
+        <Publications />
+        <SectionDivider />
+        <OpenSource />
         <SectionDivider />
         <Certifications />
         <SectionDivider />

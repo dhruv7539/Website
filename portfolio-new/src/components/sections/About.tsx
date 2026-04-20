@@ -52,23 +52,27 @@ export default function About() {
               </span>
               , with a B.Tech in CS from Pandit Deendayal Energy University
               (3.88 GPA). I specialize in building production-grade distributed
-              systems, scalable APIs, and cloud-native applications.
+              systems, scalable APIs, and AI-powered platforms.
             </p>
             <p className="text-base sm:text-lg leading-relaxed text-muted-foreground">
-              My expertise spans the full stack — from React and Next.js
-              frontends to Node.js/Django microservices, gRPC APIs, and Kafka
-              event pipelines. I&apos;ve deployed on AWS with Docker and
-              Kubernetes, automated CI/CD with GitHub Actions, and built
-              AI-powered platforms using LLM agents like Claude 3.5 and Letta AI.
-            </p>
-            <p className="text-base sm:text-lg leading-relaxed text-muted-foreground">
-              Currently studying Analysis of Algorithms, NLP, Information
-              Retrieval, and Web Technologies at USC while interning at the{" "}
+              I&apos;ve contributed to{" "}
               <span className="text-foreground font-medium">
-                USC Norman Lear Center
+                Kubernetes (v1.36)
               </span>
-              , where I&apos;ve boosted API throughput by 42% and cut deployment
-              errors with automated pipelines.
+              , built LLM diagnostic agents with Claude API, engineered
+              Raft-based distributed file systems, and deployed GenAI pipelines
+              processing 1.5M+ tokens for World Bank and Gates Foundation
+              research. My stack spans Go, Python, TypeScript, Django, Kafka,
+              gRPC, AWS, Docker, Kubernetes, Helm, and Terraform.
+            </p>
+            <p className="text-base sm:text-lg leading-relaxed text-muted-foreground">
+              Currently working at the{" "}
+              <span className="text-foreground font-medium">
+                USC Annenberg Norman Lear Center
+              </span>{" "}
+              building NLP pipelines and semantic retrieval systems, with 2 IEEE
+              publications and 8+ merged open-source PRs across Kubernetes,
+              Glean, OWASP, and pnpm.
             </p>
 
             <div className="flex flex-wrap gap-3 pt-4">

@@ -2,10 +2,10 @@ export const siteConfig = {
   name: "Dhruv Bhanderi",
   title: "Dhruv Bhanderi — Software Engineer",
   description:
-    "Software Engineer specializing in full-stack development, cloud infrastructure, and scalable systems. MS CS @ USC.",
+    "Software Engineer specializing in distributed systems, cloud infrastructure, and AI-powered platforms. MS CS @ USC.",
   url: "https://dhruvbhanderi.com",
   email: "dbhander@usc.edu",
-  phone: "213-725-8988",
+  phone: "(213) 725-8988",
   location: "Los Angeles, CA",
   resumeUrl:
     "https://drive.google.com/file/d/1JPiUdoTwses7-89eUksZgH1sHhNIIUK3/view?usp=sharing",
@@ -19,7 +19,7 @@ export const socialLinks = [
   },
   {
     name: "LinkedIn",
-    url: "https://www.linkedin.com/in/dhruvbhanderi7/",
+    url: "https://www.linkedin.com/in/bhanderi7/",
     icon: "linkedin",
   },
   {
@@ -39,7 +39,8 @@ export const navItems = [
   { name: "Skills", href: "#skills" },
   { name: "Experience", href: "#experience" },
   { name: "Projects", href: "#projects" },
-  { name: "Certifications", href: "#certifications" },
+  { name: "Publications", href: "#publications" },
+  { name: "Open Source", href: "#opensource" },
   { name: "Contact", href: "#contact" },
 ];
 
@@ -50,76 +51,78 @@ export const skills = [
       { name: "Python", level: 92 },
       { name: "JavaScript (ES6+)", level: 93 },
       { name: "TypeScript", level: 88 },
-      { name: "SQL", level: 85 },
+      { name: "Go", level: 82 },
+      { name: "Java", level: 80 },
       { name: "C++", level: 78 },
-      { name: "HTML5/CSS3", level: 87 },
+      { name: "SQL", level: 85 },
     ],
   },
   {
     category: "Frontend",
     items: [
       { name: "React", level: 93 },
-      { name: "Next.js", level: 82 },
+      { name: "Next.js", level: 85 },
       { name: "Vue.js", level: 76 },
       { name: "Tailwind CSS", level: 88 },
-      { name: "Framer Motion", level: 72 },
+      { name: "HTML5/CSS3", level: 87 },
     ],
   },
   {
     category: "Backend",
     items: [
-      { name: "Node.js", level: 92 },
-      { name: "Express.js", level: 90 },
-      { name: "Django", level: 88 },
+      { name: "Django / DRF", level: 90 },
+      { name: "Node.js / Express", level: 92 },
+      { name: "FastAPI", level: 82 },
       { name: "Flask", level: 78 },
       { name: "REST APIs", level: 93 },
-      { name: "gRPC", level: 75 },
+      { name: "gRPC", level: 78 },
     ],
   },
   {
     category: "Cloud & DevOps",
     items: [
-      { name: "AWS (EB, RDS, S3)", level: 88 },
-      { name: "Docker", level: 86 },
-      { name: "Kubernetes", level: 74 },
-      { name: "GitHub Actions", level: 91 },
-      { name: "CI/CD Pipelines", level: 90 },
+      { name: "AWS (EB, RDS, S3, Lambda)", level: 88 },
+      { name: "Docker", level: 88 },
+      { name: "Kubernetes / Helm", level: 82 },
+      { name: "Terraform", level: 78 },
+      { name: "GitHub Actions / CI/CD", level: 91 },
     ],
   },
   {
-    category: "Databases",
+    category: "Databases & Messaging",
     items: [
-      { name: "PostgreSQL", level: 91 },
+      { name: "PostgreSQL / pgvector", level: 91 },
       { name: "MongoDB", level: 83 },
       { name: "Redis", level: 78 },
-      { name: "MySQL", level: 80 },
+      { name: "Kafka", level: 78 },
     ],
   },
   {
-    category: "Tools & Testing",
+    category: "ML / NLP / AI",
     items: [
-      { name: "Kafka", level: 74 },
-      { name: "Jest / PyTest", level: 80 },
-      { name: "Git & GitHub", level: 93 },
-      { name: "Postman", level: 82 },
-      { name: "Agile / Code Reviews", level: 85 },
+      { name: "PyTorch", level: 80 },
+      { name: "Claude / OpenAI APIs", level: 88 },
+      { name: "RAG Pipelines", level: 82 },
+      { name: "LLM Function Calling", level: 85 },
+      { name: "Hugging Face", level: 78 },
     ],
   },
 ];
 
 export const experiences = [
   {
-    role: "Software Engineer Intern",
-    company: "USC Norman Lear Center",
+    role: "Software Engineer",
+    company: "USC Annenberg Norman Lear Center",
     location: "Los Angeles, CA",
     date: "May 2025 – Present",
     bullets: [
-      "Architected and deployed a Django + PostgreSQL backend on AWS Elastic Beanstalk, optimizing ORM queries, connection pooling, and indexing to boost API throughput 42% and reduce response latency 35% under peak load.",
-      "Developed a React + Django REST search system with dynamic year-filter and keyword routing, improving frontend load times by 30%, enhancing UX, and ensuring seamless API integration across modules.",
-      "Automated ETL pipelines using AWS RDS snapshots, S3, and Python, enabling fault-tolerant data ingestion, accelerated data syncs, consistent environment deployments, and automated schema version control.",
-      "Implemented CI/CD pipelines with rollback support and environment parity checks, increasing release reliability by 40%, reducing deployment errors, and enabling automated AWS builds with GitHub Actions workflows.",
+      "Architected a Django + PostgreSQL backend on AWS Elastic Beanstalk; optimized ORM queries, connection pooling, and B-tree indexing to boost API throughput 42% and reduce p95 latency 35% under peak load.",
+      "Built scalable ETL pipelines processing 50K+ multilingual data points and 1.5M+ tokens into PostgreSQL + pgvector, with async I/O throttling reducing API rate-limit failures to <2%.",
+      "Built GenAI-native data pipelines leveraging LLM classification (OpenAI, Claude) for sentiment/toxicity analysis on multilingual social media data for World Bank and Gates Foundation research.",
+      "Engineered a semantic retrieval system using text-embedding-3-large with pgvector for 150K+ records; evaluated inter-annotator agreement (Cohen's kappa = 0.576, Krippendorff's alpha).",
+      "Configured CI/CD pipelines with rollback support via GitHub Actions; automated Docker image builds and health-probe validation, increasing release reliability 40%.",
     ],
-    tags: ["Django", "PostgreSQL", "AWS", "React", "CI/CD"],
+    tags: ["Django", "PostgreSQL", "AWS", "GenAI", "pgvector", "Docker"],
   },
   {
     role: "Software Development Engineer",
@@ -127,9 +130,9 @@ export const experiences = [
     location: "India",
     date: "Jan 2024 – Jul 2024",
     bullets: [
-      "Designed Node.js/Express microservices with Redis caching and Kafka workers; improved p95 latency by 35% and doubled throughput (2.1×) across 14+ stable releases via horizontal scaling and async I/O optimization.",
-      "Automated CI/CD pipelines via GitHub Actions (parallel tests, cached images), reducing build-to-deploy time from 18m to 7m (-61%) and enabling one-click rollbacks with Dockerized staging verification checks.",
-      "Refactored a monolith into modular microservices with gRPC APIs, distributed tracing, and rate limiting, improving fault isolation and deployment velocity 3× across environments through containerized orchestration.",
+      "Designed Node.js/Express microservices with Redis caching and Kafka message queues, improving p95 latency 35% and doubling throughput (2.1x) across 14+ stable releases via horizontal scaling and async I/O.",
+      "Streamlined CI/CD via GitHub Actions with parallel tests and cached Docker images, cutting build-to-deploy time from 18 min to 7 min (-61%) and enabling one-click rollbacks.",
+      "Refactored a monolithic codebase into modular microservices with gRPC APIs, distributed tracing, and rate limiting, accelerating deployment velocity 3x across environments.",
     ],
     tags: ["Node.js", "Redis", "Kafka", "Docker", "gRPC"],
   },
@@ -139,11 +142,11 @@ export const experiences = [
     location: "India",
     date: "May 2023 – Aug 2023",
     bullets: [
-      "Built modular Vue.js + TypeScript + Tailwind dashboards for 300+ DAUs with responsive, accessibility UX.",
-      "Implemented OAuth2 + RBAC, blocking 90% of unauthorized requests; deployed serverless functions for analytics.",
-      "Partnered with design/QA to ensure WCAG accessibility compliance and stable user-facing releases.",
+      "Built modular Vue.js + TypeScript + Tailwind CSS dashboards serving 300+ DAUs with responsive, accessible UX.",
+      "Implemented OAuth2 + RBAC authorization, blocking 90% of unauthorized requests; deployed serverless functions for real-time analytics.",
+      "Wrote 50+ unit and integration tests (Jest, Cypress), achieving 85% code coverage; resolved 12 WCAG accessibility violations across 6 modules.",
     ],
-    tags: ["Vue.js", "TypeScript", "Tailwind", "OAuth2", "Serverless"],
+    tags: ["Vue.js", "TypeScript", "Tailwind", "OAuth2", "Jest"],
   },
 ];
 
@@ -154,9 +157,11 @@ export const education = [
     date: "Sep 2024 – May 2026",
     courses: [
       "Analysis of Algorithms",
+      "Distributed Systems",
       "Information Retrieval",
       "Web Technologies",
       "Natural Language Processing",
+      "Computer Networks",
     ],
   },
   {
@@ -168,51 +173,53 @@ export const education = [
       "Machine Learning",
       "Database Management Systems",
       "Artificial Intelligence",
+      "Operating Systems",
+      "Computer Networks",
     ],
   },
 ];
 
 export const projects = [
   {
-    title: "Reddit AI-Native Platform",
+    title: "DeployIQ — AI K8s Deployment Pipeline",
     description:
-      "Rebuilt Reddit as an AI-native platform using Claude 3.5 for sentiment analysis on 500+ comments under 5s. Integrated Letta AI moderation agents with persistent memory, reducing redundant flags by 80% vs AutoMod. Engineered Node.js + Flask API and MongoDB pipeline for multi-thread analysis and dashboard.",
-    tags: ["Node.js", "Flask", "MongoDB", "Docker", "LLM Agents"],
-    github: "",
-    live: "https://devpost.com/software/redditai",
-    featured: true,
-  },
-  {
-    title: "Fin-Nexus (FinTech SaaS Platform)",
-    description:
-      "Integrated Plaid + Dwolla APIs for KYC/ACH transfers in under 2 minutes with auth, logging, and OpenAPI docs. Automated CI/CD with Docker + Kubernetes + GitHub Actions; added tests, release notes, and monitoring.",
-    tags: ["Next.js", "Docker", "Kubernetes", "GitHub Actions", "Plaid"],
-    github: "https://github.com/dhruv7539/Fin-Nexus",
+      "Production-grade Go CLI for Kubernetes deployments with an LLM diagnostic agent using Claude API with native function calling. Iteratively invokes 5 K8s tools across up to 5 reasoning iterations. RAG pipeline with pgvector for incident retrieval. Kafka event streaming, 6 custom Prometheus metrics, Terraform IaC, and <30s automated rollbacks.",
+    tags: ["Go", "Kubernetes", "Claude API", "Kafka", "Terraform", "Prometheus"],
+    github: "https://github.com/dhruv7539/deployiq",
     live: "",
     featured: true,
   },
   {
     title: "Distributed File Storage System",
     description:
-      "Implemented a GFS-inspired distributed file system using Raft consensus for replication and failover. Designed sharded metadata and chunk servers with replication, achieving 99.99% durability under node failures. Benchmarked throughput at 20K+ ops/sec across concurrent clients.",
-    tags: ["C++", "gRPC", "Raft Consensus", "Unix/Linux"],
-    github: "https://github.com/dhruv7539",
+      "GFS-inspired distributed file system built from scratch with Raft-replicated master cluster for leader election, log replication, and automatic failover. 16-shard metadata partitioning with chain-replication writes across N-way replicas, benchmarked at 47K+ ops/sec (64 concurrent clients, p99 latency 2.3ms).",
+    tags: ["C++", "gRPC", "Raft Consensus", "Protobuf"],
+    github: "https://github.com/dhruv7539/distributed-file-storage",
     live: "",
     featured: true,
   },
   {
-    title: "BigBrain",
+    title: "Reddit:AI — Intelligence Platform",
     description:
-      "A Next.js-powered platform for interactive learning, AI-driven insights, and real-time knowledge sharing. Built with TypeScript, TailwindCSS, and Convex for smart content organization and seamless user interactions.",
-    tags: ["Next.js", "TypeScript", "Tailwind", "Convex"],
-    github: "https://github.com/dhruv7539/BigBrain",
-    live: "https://big-brain-pied.vercel.app/",
+      "AI-powered platform built at CalHacks 12.0 with real-time sentiment and toxicity classification using Claude. Integrated Letta AI agents with persistent memory, reducing redundant moderation flags 80% vs. AutoMod. Built with Next.js, FastAPI, and MongoDB.",
+    tags: ["Next.js", "FastAPI", "Claude", "MongoDB", "Docker"],
+    github: "",
+    live: "https://devpost.com/software/redditai",
+    featured: true,
+  },
+  {
+    title: "Fin-Nexus (FinTech SaaS)",
+    description:
+      "Integrated Plaid + Dwolla APIs for KYC verification and ACH transfers in under 2 minutes. Automated CI/CD with Docker + Kubernetes + GitHub Actions with test gates, release notes, and monitoring.",
+    tags: ["Next.js", "Plaid", "Docker", "Kubernetes", "GitHub Actions"],
+    github: "https://github.com/dhruv7539/Fin-Nexus",
+    live: "",
     featured: true,
   },
   {
     title: "PixMod — AI Image SaaS",
     description:
-      "An AI-driven SaaS platform for advanced image processing featuring image restoration, recoloring, object removal, generative filling, and background removal. Includes secure auth, Stripe payments, and a credits system.",
+      "AI-driven SaaS platform for advanced image processing featuring restoration, recoloring, object removal, generative filling, and background removal. Includes secure auth, Stripe payments, and a credits system.",
     tags: ["Next.js", "TypeScript", "MongoDB", "Cloudinary", "Stripe"],
     github: "https://github.com/dhruv7539/PixMod",
     live: "https://pixmod.vercel.app/",
@@ -221,11 +228,73 @@ export const projects = [
   {
     title: "Hospital Management System",
     description:
-      "A healthcare patient management app enabling patients to register, book, and manage appointments with doctors. Features admin scheduling tools, SMS notifications via Twilio, and performance monitoring with Sentry.",
+      "Healthcare patient management app with registration, appointment booking, admin scheduling, SMS notifications via Twilio, and performance monitoring with Sentry.",
     tags: ["Next.js", "TypeScript", "Appwrite", "Tailwind", "Twilio"],
     github: "https://github.com/dhruv7539/Hospital-Management",
     live: "https://hims-rouge.vercel.app/",
     featured: false,
+  },
+];
+
+export const publications = [
+  {
+    title: "Bridging Dialects: Enhancing Neural Machine Dialect Translation for Gujarati Language Through Model Adaptation",
+    venue: "IEEE INDIACom 2025",
+    authors: "Thakkar, Vekariya, Bhanderi, Paliwal",
+    highlight: "Outperformed GPT-4 and Gemini on BLEU, METEOR, and chrF metrics",
+    tags: ["NLP", "PyTorch", "NLLB", "Low-Resource Languages"],
+  },
+  {
+    title: "Impact of Two-Factor Authentication on User Convenience and Security",
+    venue: "IEEE INDIACom 2023",
+    authors: "Bhanderi et al.",
+    highlight: "Cited 2 times",
+    tags: ["Security", "Authentication", "User Research"],
+  },
+];
+
+export const openSourceContributions = [
+  {
+    project: "Kubernetes",
+    repo: "kubernetes/kubernetes",
+    pr: "#137189",
+    prUrl: "https://github.com/kubernetes/kubernetes/pull/137189",
+    description: "Fixed client-go fake Pods.GetLogs to honor test reactors in v1.36. Made GetLogs reactor-aware, propagated reactor errors, and wrote comprehensive unit tests.",
+    reviewedBy: "@liggitt (senior K8s maintainer)",
+    lines: "+92, -3",
+    tags: ["Go", "client-go", "Kubernetes"],
+  },
+  {
+    project: "Glean Agent Toolkit",
+    repo: "gleanwork/glean-agent-toolkit",
+    pr: "#25",
+    prUrl: "https://github.com/gleanwork/glean-agent-toolkit/pull/25",
+    description: "Fixed Pydantic serialization so camelCase alias fields survived ADK adapters. Added regression tests for SDK compatibility.",
+    tags: ["Python", "Pydantic", "AI Agents"],
+  },
+  {
+    project: "pnpm",
+    repo: "pnpm/pnpm",
+    pr: "#10711",
+    prUrl: "https://github.com/pnpm/pnpm/pull/10711",
+    description: "Fixed cached bundled-manifest behavior so devDependencies persist in stored manifest subsets.",
+    tags: ["TypeScript", "Package Managers"],
+  },
+  {
+    project: "OWASP BLT",
+    repo: "OWASP-BLT/BLT",
+    pr: "#5948",
+    prUrl: "https://github.com/OWASP-BLT/BLT/pull/5948",
+    description: "Fixed N+1 query in the issues API with select_related, prefetch_related, and annotated counts.",
+    tags: ["Python", "Django", "Performance"],
+  },
+  {
+    project: "Glean MCP Server",
+    repo: "gleanwork/mcp-server",
+    pr: "#342",
+    prUrl: "https://github.com/gleanwork/mcp-server/pull/342",
+    description: "Added GHCR visibility validation and runtime smoke testing for Dockerized MCP server releases.",
+    tags: ["Docker", "MCP", "CI/CD"],
   },
 ];
 
@@ -261,12 +330,13 @@ export const terminalCommands = [
   {
     command: "cat about.txt",
     output:
-      "Software Engineer | Distributed Systems | Full-Stack | Cloud & AI",
+      "Software Engineer | Distributed Systems | Cloud & AI | Open Source Contributor",
   },
   {
     command: "ls skills/",
     output:
-      "Python  JavaScript  TypeScript  React  Node.js  Django  Flask  AWS  Docker  K8s  gRPC  Kafka  PostgreSQL  MongoDB  Redis",
+      "Python  Go  TypeScript  React  Django  FastAPI  AWS  Docker  K8s  Helm  Terraform  Kafka  gRPC  PostgreSQL  pgvector",
   },
-  { command: "cat status.txt", output: "Open to opportunities ✓" },
+  { command: "git log --oneline -1 k8s", output: "PR #137189 merged into kubernetes/kubernetes v1.36" },
+  { command: "cat status.txt", output: "Open to new grad SWE opportunities ✓" },
 ];
